@@ -30,14 +30,16 @@
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="container body-content theBody">
         @RenderBody()
-        <hr />
+        <div class="padding"></div>
+    </div>
+    <div class="container">
+    <hr />
         <footer>
             <p>&copy; 2018 - Tamagotchi</p>
         </footer>
     </div>
-
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
