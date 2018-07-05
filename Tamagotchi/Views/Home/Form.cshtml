@@ -1,5 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Create a Tamagotchi";
 }
+<form action="/pets" method="post">
+    <div class="form-group">
+        <label for="pet-name">Enter a name for your Tamagotchi</label>
+        <input type="text" name="pet-name" id="pet-name" required>
+        <button type="submit" class="btn btn-primary">Make Pet</button>
+    </div>
+</form>

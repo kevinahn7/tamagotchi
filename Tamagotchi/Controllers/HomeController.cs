@@ -13,5 +13,12 @@ namespace Tamagotchi.Controllers
         {
             return View();
         }
+
+        [HttpGet("/form")]
+        public ActionResult Form()
+        {
+            return View();
+        }
+
     }
 }

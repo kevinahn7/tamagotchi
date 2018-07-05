@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
+<h1>Welcome</h1>
+
+<div>
+    @foreach (var pet in Model)
+      {
+        <div>
+            Name: @pet.GetName()
+            Rest: @pet.GetRest()
+            Attention: @pet.GetAttention()
+            Hunger: @pet.GetHunger()
+            Age: @pet.GetAge()
+            <form method="post" action="/pets/feed/@pet.GetId()">
+                <button type="submit">Give food</button>
+            </form>
+            <form method="post" action="/pets/attention/@pet.GetId()">
+                <button type="submit">Give Attention</button>
+            </form>
+            <form method="post" action="/pets/rest/@pet.GetId()">
+                <button type="submit">Let Rest</button>
+            </form>
+        </div>
+      }
+</div>
+
+  <a href='/form'>Add new item</a>
