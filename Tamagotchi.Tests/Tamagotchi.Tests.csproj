@@ -12,4 +12,11 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.1.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tamagotchi\Tamagotchi.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelTests\" />
+    <Folder Include="New Folder\" />
+  </ItemGroup>
 </Project>
