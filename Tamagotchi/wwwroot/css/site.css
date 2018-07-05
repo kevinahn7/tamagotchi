@@ -36,6 +36,27 @@ textarea {
     }
 }
 
+.homeWelcome {
+    text-align: center;
+}
+
+.homeButtons {
+    margin: 0 auto;
+    display: block;
+}
+
+.makePet {
+    text-align: center;
+}
+
+.theForm {
+    margin-top: 40px;
+}
+
+.theInput {
+    margin: 0 auto;
+}
+
 .theGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

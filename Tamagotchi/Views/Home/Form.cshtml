@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Create a Tamagotchi";
 }
-<form action="/pets" method="post">
-    <div class="form-group">
+<form action="/pets" method="post" class="makePet">
+    <div class="form-group theForm">
         <label for="pet-name">Enter a name for your Tamagotchi</label>
-        <input type="text" name="pet-name" id="pet-name" required>
+        <input type="text" class="form-control theInput" name="pet-name" id="pet-name" required>
         <button type="submit" class="btn btn-primary">Make Pet</button>
     </div>
 </form>
