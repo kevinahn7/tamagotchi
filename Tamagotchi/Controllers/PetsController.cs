@@ -51,6 +51,12 @@ namespace Tamagotchi.Controllers
             return RedirectToAction("Pets");
         }
 
-   
+        [HttpPost("/pets/clear")]
+        public ActionResult Clear()
+        {
+            Pet.ClearAll();
+
+            return RedirectToAction("Pets");
+        }
     }
 }
