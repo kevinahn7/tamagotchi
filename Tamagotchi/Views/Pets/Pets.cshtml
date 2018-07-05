@@ -9,7 +9,7 @@
         @if (pet.GetRest() <= 0 || pet.GetAttention() <= 0 || pet.GetHunger() <= 0)
         {
             <div class="deadPet">
-                <h3>Your Pet Died!</h3>
+                <h3>@pet.GetName() died!</h3>
                 <img src="images/dead.png" class="grave">
             </div>
         }
