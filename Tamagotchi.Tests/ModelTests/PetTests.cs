@@ -54,5 +54,33 @@ namespace Tamagotchi.Tests
             Assert.AreEqual(2, newPetBob.GetId());
         }
 
+        [TestMethod]
+        public void FindPet_FindsPet_ReturnEqualValue()
+        {
+            Pet newPetJeff = new Pet("Jeff");
+            Pet newPetTom = new Pet("Tom");
+            List<Pet> newList = Pet.GetAllPets();
+            Pet foundPet = Pet.FindPet(2);
+            Pet actualPet = newList[1];
+            Assert.AreEqual(actualPet, foundPet);
+        }
+
+        [TestMethod]
+        public void UpdateAttributes_UpdatesPetAttributes_ReturnEqualValue()
+        {
+            Pet newPetJeff = new Pet("Jeff");
+            newPetJeff.UpdateAttention();
+            newPetJeff.UpdateAttention();
+            newPetJeff.UpdateAttention();
+            newPetJeff.UpdateRest();
+            newPetJeff.UpdateRest();
+            newPetJeff.UpdateHunger();
+
+            Assert.AreEqual(2, newPetJeff.GetAge());
+            Assert.AreEqual(130, newPetJeff.GetAttention());
+            Assert.AreEqual(100, newPetJeff.GetRest());
+            Assert.AreEqual(70, newPetJeff.GetHunger());
+        }
+
     }
 }
