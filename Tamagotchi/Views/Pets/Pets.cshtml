@@ -3,29 +3,33 @@
 }
 <h1>Welcome</h1>
 
-<div>
+<div class="theGrid">
     @foreach (var pet in Model)
       {
         @if (pet.GetRest() <= 0 || pet.GetAttention() <= 0 || pet.GetHunger() <= 0)
         {
-            <h3>Your Pet Died!</h3>
+            <div class="deadPet">
+                <h3>Your Pet Died!</h3>
+                <img src="images/dead.png" class="grave">
+            </div>
         }
         else
         {
-            <div>
-                Name: @pet.GetName()
-                Rest: @pet.GetRest()
-                Attention: @pet.GetAttention()
-                Hunger: @pet.GetHunger()
-                Age: @pet.GetAge()
+            <div class="alivePet">
+                <img src="images/pet.gif" class="pet">
+                <p>Name: @pet.GetName()<p>
+                <p>Rest: @pet.GetRest()<p>
+                <p>Attention: @pet.GetAttention()<p>
+                <p>Hunger: @pet.GetHunger()<p>
+                <p>Age: @pet.GetAge()<p>
                 <form method="post" action="/pets/feed/@pet.GetId()">
-                    <button type="submit">Give food</button>
+                    <button class="btn btn-info" type="submit">Give food</button>
                 </form>
                 <form method="post" action="/pets/attention/@pet.GetId()">
-                    <button type="submit">Give Attention</button>
+                    <button class="btn btn-info" type="submit">Give Attention</button>
                 </form>
                 <form method="post" action="/pets/rest/@pet.GetId()">
-                    <button type="submit">Let Rest</button>
+                    <button class="btn btn-info" type="submit">Let Rest</button>
                 </form>
             </div> 
         }
@@ -33,4 +37,5 @@
       }
 </div>
 
-  <a href='/form'>Add new item</a>
+  <a href='/form'><button class="btn btn-success addNewButton">Add new item</button></a>
+

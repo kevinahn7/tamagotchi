@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
 /* Wrapping element */
@@ -34,4 +34,42 @@ textarea {
     .carousel-caption {
         display: none
     }
+}
+
+.theGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.theGrid > div {
+    min-height: 300px;
+}
+
+.deadPet {
+    text-align: center;
+}
+
+.grave {
+    width: 50%;
+}
+
+.alivePet {
+    margin: auto;
+}
+
+.pet {
+    width: 40%;
+    display: block;
+    margin: auto auto;
+}
+
+.addNewButton {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+}
+
+form {
+    display: inline;
 }

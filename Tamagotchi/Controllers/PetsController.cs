@@ -50,5 +50,7 @@ namespace Tamagotchi.Controllers
             currentPet.UpdateRest();
             return RedirectToAction("Pets");
         }
+
+   
     }
 }
