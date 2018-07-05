@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Wrapping element */
@@ -57,6 +58,11 @@ textarea {
     margin: 0 auto;
 }
 
+.petsTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .theGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -83,6 +89,7 @@ textarea {
     width: 40%;
     display: block;
     margin: auto auto;
+    margin-bottom: 10px;
 }
 
 .addNewButton {
