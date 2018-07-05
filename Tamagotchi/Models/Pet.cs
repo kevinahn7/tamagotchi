@@ -16,8 +16,8 @@ namespace Tamagotchi.Models
         public Pet(string name)
         {
             _name = name;
-            _id = _petList.Count;
             _petList.Add(this);
+            _id = _petList.Count;
         }
 
         public string GetName()
@@ -48,6 +48,33 @@ namespace Tamagotchi.Models
         public int GetId()
         {
             return _id;
+        }
+
+        public static List<Pet> GetAllPets()
+        {
+            return _petList;
+        }
+
+        public static void ClearAll()
+        {
+            _petList.Clear();
+        }
+
+        public static void ClearPet(int petID)
+        {
+            _petList.RemoveAt(petID - 1);
+            foreach(Pet pet in _petList)
+            {
+                if (pet._id > petID)
+                {
+                    pet._id--;
+                }
+            }
+        }
+
+        public static Pet FindPet(int searchId)
+        {
+            return _petList[searchId - 1];
         }
 
         public void UpdateAttributes()
