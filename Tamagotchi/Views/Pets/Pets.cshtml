@@ -6,22 +6,30 @@
 <div>
     @foreach (var pet in Model)
       {
-        <div>
-            Name: @pet.GetName()
-            Rest: @pet.GetRest()
-            Attention: @pet.GetAttention()
-            Hunger: @pet.GetHunger()
-            Age: @pet.GetAge()
-            <form method="post" action="/pets/feed/@pet.GetId()">
-                <button type="submit">Give food</button>
-            </form>
-            <form method="post" action="/pets/attention/@pet.GetId()">
-                <button type="submit">Give Attention</button>
-            </form>
-            <form method="post" action="/pets/rest/@pet.GetId()">
-                <button type="submit">Let Rest</button>
-            </form>
-        </div>
+        @if (pet.GetRest() <= 0 || pet.GetAttention() <= 0 || pet.GetHunger() <= 0)
+        {
+            <h3>Your Pet Died!</h3>
+        }
+        else
+        {
+            <div>
+                Name: @pet.GetName()
+                Rest: @pet.GetRest()
+                Attention: @pet.GetAttention()
+                Hunger: @pet.GetHunger()
+                Age: @pet.GetAge()
+                <form method="post" action="/pets/feed/@pet.GetId()">
+                    <button type="submit">Give food</button>
+                </form>
+                <form method="post" action="/pets/attention/@pet.GetId()">
+                    <button type="submit">Give Attention</button>
+                </form>
+                <form method="post" action="/pets/rest/@pet.GetId()">
+                    <button type="submit">Let Rest</button>
+                </form>
+            </div> 
+        }
+
       }
 </div>
 
