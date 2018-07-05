@@ -81,6 +81,5 @@ namespace Tamagotchi.Tests
             Assert.AreEqual(100, newPetJeff.GetRest());
             Assert.AreEqual(70, newPetJeff.GetHunger());
         }
-
     }
 }
